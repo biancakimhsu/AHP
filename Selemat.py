@@ -10,14 +10,14 @@ if 'etapa_2_liberada' not in st.session_state:
     st.session_state.etapa_2_liberada = False
 
 # 1. Definição da Quantidade
-n = st.number_input("Quantos critérios?", min_value=0, max_value=15, value=0)
+n = st.number_input("Insira o número de critérios:", min_value=0, max_value=15, value=0)
 
 if n <= 1:
     st.session_state.etapa_2_liberada = False
 
 if n > 1:
     # --- ETAPA 1: ENTRADA DE NOMES ---
-    st.subheader("Insira os critérios")
+    st.subheader("Insira os critérios:")
     nomes = []
     
     cols = st.columns(n)
@@ -31,7 +31,7 @@ if n > 1:
     # --- ETAPA 2: COMPARAÇÃO ---
     if st.session_state.etapa_2_liberada:
         st.divider()
-        st.subheader("Compração de importância")
+        st.subheader("Comparação de importância")
         st.info("Deslize para a esquerda para o 1º critério ou para a direita para o 2º.")
 
         pares = list(combinations(range(n), 2))
