@@ -1,0 +1,17 @@
+[theme]
+# 1. A COR PRINCIPAL (Sliders, Botões e Barras de Progresso)
+# Troque este código para a cor que desejar. Coloquei um Azul Corporativo de exemplo.
+primaryColor = "#005CBE"
+
+# 2. A COR DO FUNDO PRINCIPAL
+# Se quiser manter escuro como na sua imagem, use este:
+backgroundColor = "#0E1117"
+# (Se preferir fundo claro, mude para "#FFFFFF")
+
+# 3. A COR DO FUNDO SECUNDÁRIO
+# É isso que muda o fundo daquela caixinha de aviso "Deslize para a esquerda..."
+secondaryBackgroundColor = "#262730"
+
+# 4. A COR DO TEXTO
+textColor = "#FAFAFA"
+
