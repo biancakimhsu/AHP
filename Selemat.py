@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 from itertools import combinations
 
-st.set_page_config(page_title="Meu App AHP", page_icon="📊", layout="wide")
+st.set_page_config(page_title="Bibi's AHP", page_icon="", layout="wide")
 st.title("Método AHP")
 
 # --- INICIALIZANDO A MEMÓRIA DO APP ---
