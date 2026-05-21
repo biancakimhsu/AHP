@@ -3,20 +3,32 @@ import numpy as np
 from itertools import combinations
 
 st.set_page_config(page_title="Bibi's AHP", page_icon="", layout="wide")
+
+# Esconde o menu de opções, o botão de ver código e o rodapé da nuvem
+esconder_botoes_streamlit = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            ul[data-testid="main-menu-list"] {display: none;}
+            </style>
+            """
+st.markdown(esconder_botoes_streamlit, unsafe_allow_html=True)
+
 st.title("Método AHP")
 
 # --- INICIALIZANDO A MEMÓRIA DO APP ---
 if 'etapa_2_liberada' not in st.session_state:
     st.session_state.etapa_2_liberada = False
 
-# 1. Definição da Quantidade
+# Definição da Quantidade
 n = st.number_input("Insira o número de critérios:", min_value=0, max_value=15, value=0)
 
 if n <= 1:
     st.session_state.etapa_2_liberada = False
 
 if n > 1:
-    # --- ETAPA 1: ENTRADA DE NOMES ---
+    # Entrada dos Critérios
     st.subheader("Insira os critérios:")
     nomes = []
     
@@ -28,7 +40,7 @@ if n > 1:
     if st.button("Confirmar Critérios"):
         st.session_state.etapa_2_liberada = True
 
-    # --- ETAPA 2: COMPARAÇÃO ---
+    # Comparação de Importância
     if st.session_state.etapa_2_liberada:
         st.divider()
         st.subheader("Comparação de importância")
